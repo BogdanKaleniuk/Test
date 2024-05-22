@@ -1,0 +1,135 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.home-repairs {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.repair-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.repair-category {
+  position: relative;
+  flex: 1 1 calc(33.333% - 16px);
+  max-width: 394px;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+.repair-category-content {
+  margin-top: 150px;
+}
+
+.repair-category:nth-of-type(4n + 1) {
+  border-color: #179d2e;
+}
+
+.repair-category:nth-of-type(4n + 2) {
+  border-color: #0177b8;
+}
+
+.repair-category:nth-of-type(4n + 3) {
+  border-color: #f5af23;
+}
+
+.repair-category:nth-of-type(4n) {
+  border-color: #f02e2c;
+}
+
+.repair-category h3 {
+  font-weight: 600;
+}
+
+.repair-category ul {
+  list-style-type: disc;
+  padding-right: 24px;
+}
+
+.repair-category ul li {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.repair-category ul li:last-child {
+  padding-top: 30px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.repair-category a {
+  display: inline-block;
+  padding-top: 24px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  list-style: none;
+}
+
+.color-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding-bottom: 10px;
+}
+
+.title-content {
+  font-size: 36px;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 24px;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .repair-category {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+  .repair-category:nth-last-of-type(1) {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .repair-category {
+    flex: 1 1 calc(100% - 16px);
+    max-width: calc(100% - 16px);
+  }
+
+  .color-icon {
+    top: 16px;
+    right: 16px;
+  }
+
+  .repair-category-content {
+    margin-top: 120px;
+  }
+
+  .repair-category ul li {
+    font-size: 18px;
+  }
+
+  .title-content {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .repair-category:nth-last-of-type(1) {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+}
+
+.repair-category.outdoor-column {
+  order: -1;
+}
